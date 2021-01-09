@@ -1,11 +1,26 @@
 module.exports = {
-  purge: [],
+  purge: [
+    "./public/**/*.html",
+    "./public/**/*.js"
+  ],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      fontFamily : {
+        'poppins' : ['Poppins'],
+        'roboto' : ['Roboto']
+      },
+      colors : {
+        'light-green' : '#30D7BA',
+        'light-blue' : '#03D6F3',
+        'dark-blue' : '#112D57'
+      }
+    },
   },
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/forms')
+  ],
 }
